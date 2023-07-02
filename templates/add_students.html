@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/"><button>Home</button></a>
+    <a href="/list"><button>List students</button></a>
+    <br><hr>
+    <form action = "{{ url_for('addrec') }}" method = "POST">
+        <h3>Students' Information</h3>
+        Roll No.<br>
+        <input type = "text" name = "roll" /></br>
+
+        Name<br>
+        <input type = "text" name = "name" /></br>
+        
+        College<br>
+        <input type = "text" name = "college" /></br>
+        
+        Branch<br>
+        <input type = "text" name = "branch" /></br>
+        
+        Year of study<br>
+        <input type="number" id="quantity" name="year" min="1" max="5"><br>
+        <input type = "submit" value = "submit" /><br>
+     </form>
+</body>
+</html>

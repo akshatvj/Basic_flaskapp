@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Students</title>
+</head>
+<body>
+    <a href="/"><button>Home</button></a>
+    <a href="/add_student"><button>Add new student</button></a>
+    <br><hr>
+
+    {{ msg }}
+
+      <table border = 1>
+         <thead>
+            <td>Roll No.</td>
+            <td>Name</td>
+            <td>College</td>
+            <td>Branch</td>
+            <td>Year of study</td>
+         </thead>
+         
+         {% for row in students %}
+            <tr>
+               <td>{{row["roll"]}}</td>
+               <td>{{row["name"]}}</td>
+               <td>{{row["college"]}}</td>
+               <td>{{row["branch"]}}</td>
+               <td>{{row['year']}}</td>	
+            </tr>
+         {% endfor %}
+      </table>
+</body>
+</html>
